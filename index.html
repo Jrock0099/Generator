@@ -1,0 +1,458 @@
+<!Doctype html>
+<html>
+<head>
+    <title>The Generator</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        
+        @media only screen and (max-width:500px){
+            #title {
+                font-size:24px !important;
+            }
+        }
+
+        #body-container {
+            margin-left:15%;
+            margin-right:15%;
+        }
+         .outfit {
+            width: 100%;
+            height: auto;
+        }
+        
+        
+        #top {
+            width: 200px;
+            height: 200px;
+            display: block;
+            
+        }
+        
+        #bottom {
+            width: 200px;
+            height: 200px;
+            display: block;
+        }
+        #box  {
+            height:50px;
+            width: 250px;
+            padding: 5px 5px 5px 5px;
+            border: 1px solid black;
+        }
+        button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:11px;
+    
+}
+        button:hover {
+            background-color:aqua;
+        }
+        
+        
+        #title  {
+            font-family:roboto;
+            text-align: center;
+            font-size:48px;
+            font-weight:bold;
+            padding-top:5%;
+        }
+    
+        
+        #header  {
+            height:100px;
+            width: 100%;
+            
+        }
+        
+        #title-container  {
+            height:250px;
+            margin-left: 10%;
+            margin-right: 10%;
+            background-image: url("./Assets/background.png");
+            background-repeat: no-repeat;
+            background-size: 100%,100%;
+        }
+    </style>
+<script>
+
+function rcolor() {
+
+var number=[0,1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f"];
+
+var color ="#";
+
+for (var i =0;i<6;i++) {
+
+color += number[Math.floor(Math.random()*16)];
+
+
+}
+return color;
+    
+    
+}
+    
+    function rcompliment() {
+        
+        var adj = ["kind","funny","smart","handsome","beautiful","intelligent","nice","awesome","compassionate","witty","fun","good at coding","good at sports","fun to be around","affectionate","perfect","amazing","helpful","unique","inspiring","stylish","trustworthy","rad"];
+        var adv = ["very","extremely","tremendously","ridiculously","incredibly","super","suspiciously","unexpectedly","clearly","fatally","devilishly","quite","jaw-droppingly","utterly","so","amazingly","completely","extraordinarily","crazy","faithfully","flat out","way","totally","joyfully"];
+        var beginning = "You are";
+        
+        beginning += " " + adv[Math.floor(Math.random()*adv.length)] + " " + adj[Math.floor(Math.random()*adj.length)];
+        
+        return beginning;
+    }
+    
+
+   // document.getElementById("random").innerHTML = "color";
+    
+    
+var textColor = rcolor();
+    
+var textCompliment = rcompliment();
+    
+    var newTop = rTop();
+
+var newBottom = rBottom();
+    
+    
+    function change1() {
+        document.getElementById("random").innerHTML = "I'm a changed button";
+    }
+    
+    function change2() {
+        var newerColor = rcolor();
+        document.getElementById("random").innerHTML = newerColor;
+        document.getElementById("box").style.backgroundColor = newerColor;
+    }
+
+    function change3() {
+        var newerCompliment = rcompliment();
+        document.getElementById("randomc").innerHTML = newerCompliment
+    }
+    
+    function reset () {
+        var newColor = rcolor();
+        var newCompliment=rcompliment();
+        var top = rTop();
+        var bottom = rBottom();
+        document.getElementById("random").innerHTML = newColor;
+        document.getElementById("box").style.backgroundColor = newColor;
+        document.getElementById("randomc").innerHTML = newCompliment
+        document.getElementById("top").src = top;
+        document.getElementById("bottom").src = bottom;
+    }
+    
+    function rTop() {
+        var top = ["./Assets/button.jpg", "./Assets/fire.jpg", "./Assets/ref.jpg", "./Assets/shirt.jpg", "./Assets/coco.jpg", "./Assets/lab.jpg", "./Assets/leather_jacket.jpg", "./Assets/tye.jpg", "./Assets/vest.jpg","./Assets/ugly.jpg","./Assets/denim.jpg"];
+        
+        var ran = Math.floor(Math.random()*top.length);
+
+        
+        return top[ran];
+    }
+    
+    function rBottom() {
+        var bottom = ["./Assets/shorts.jpg", "./Assets/pants.jpg", "./Assets/leather.jpg", "./Assets/joe.jpg", "./Assets/chaps.jpg", "./Assets/hula.jpg", "./Assets/cowboy_pants.jpg", "./Assets/cheetah.jpg", "./Assets/kit.jpg","./Assets/pineapple.jpg","./Assets/skirt.jpg","./Assets/camo_pants.jpg"];
+        var ran = Math.floor(Math.random()*bottom.length);
+        
+        return bottom[ran];
+    }
+    
+    function change4() {
+        var newTop= rTop();
+        var newBottom = rBottom();
+        document.getElementById("top").src = newTop;
+        document.getElementById("bottom").src = newBottom;
+        //console.log(newTop);
+        //console.log(newBottom);
+    }
+    
+    
+    class ApexEmployee {
+        constructor(name, position) {
+            this.name = name;
+            this.position = position;
+            this.vacationDays = 7;
+        }
+        
+        
+        takeVacation(daysOff) {
+            this.vacationDays -= daysOff;
+            return this.vacationdays;
+        }
+        
+    }
+    
+    var Joe = new ApexEmployee("Joe","Coder");
+    
+    
+    function alertAndClose () {
+        alert('I told you');
+        window.close();
+    }
+    
+    var fantasyPlayers = ["baker","Joe","Jeremy","Tim","Teddy","Cam","Hal","Skye","Erique","Red","Ricky"];
+    
+    function addPlayer() {
+        var newPlayer = document.getElementById('new').value
+        fantasyPlayers.push(newPlayer)
+    }
+    
+    
+    var today = new Date();
+    var xmas = new Date(today.getFullYear(),11,25);   
+    var myBirthday = new Date(2018,10,18);
+    var jan = new Date(today.getFullYear(),0,1);
+    var feb = new Date(2018,1,1);
+    var oneDay = 1000*60*60*24;
+    
+    var daysUntil = Math.ceil((xmas.getTime()-today.getTime())/oneDay);
+    
+    var daysUntilBday= Math.ceil((myBirthday.getTime()-today.getTime())/oneDay);
+    
+    currentYear = today.getFullYear();
+    
+    console.log(today);
+    
+    function display() {
+    document.getElementById('today').innerHTML = daysUntil;
+    }
+    
+   // function displayPlayers() {
+     //   document.getElementById('players').innerHTML = fantasyPlayers;
+    //} 
+        
+        
+        
+    function calculateDate() {
+            var newDate = document.getElementById('datePicker').value
+            console.log(newDate);
+        var aDate = new Date(newDate);
+        var daysUntilDay = Math.ceil((aDate.getTime()-today.getTime())/oneDay);
+        console.log(daysUntilDay);
+       // var daysUntilDate = Math.ceil((newDate.getTime()-today.getTime())/oneDay);
+        document.getElementById('showDate').innerHTML = daysUntilDay;
+    }
+    function displayDate() {
+    document.getElementById('showDate').innerHTML = daysUntilDate;
+    }
+    
+    function calculateCelsius () {
+        var Fahrenheit = document.getElementById('degrees').value;
+        var workingNumber = Number(Fahrenheit);
+        workingNumber = workingNumber - 32;
+        workingNumber = workingNumber * .55;
+        document.getElementById('celsius').innerHTML=workingNumber;
+        
+        
+    }
+    
+    
+    
+    function getLinux () {
+        var linuxFlavors = ["Mint","Fedora","Redhat","Ubuntu","Kali","kubuntu","wine"];
+        var LinuxArrayNumber = Math.floor(Math.random()*linuxFlavors.length)
+        var linuxChoice = linuxFlavors[linuxArrayNumber];
+        return linuxChoice;
+        console.log(linuxFlavors[LinuxArrayNumber]);
+        document.getElementById('hover').innerHTML = linuxChoice;
+    }
+    
+    var symbols = ["!","@","#","&","?"];
+
+var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+function CreatePassword() {
+//start with a symbol
+var beginning = symbols[Math.floor(Math.random()*symbols.length)];
+//add two lower case characters and 1 upper case character
+var mone = alphabet[Math.floor(Math.random()*alphabet.length)];
+var mtwo = alphabet[Math.floor(Math.random()*alphabet.length)];
+var mthree = alphabet[Math.floor(Math.random()*alphabet.length)];
+var mthree = mthree.toUpperCase();
+//add another symbol
+var symbol2 = symbols[Math.floor(Math.random()*symbols.length)];
+//add 4 random numbers
+var final1 = Math.round(Math.random()*10);
+var final2 = Math.round(Math.random()*10);
+var final3 = Math.round(Math.random()*10);
+var final4 = Math.round(Math.random()*10);
+var GrandFinale = beginning + mone + mtwo + mthree + symbol2 + final1 + final2 + final3+ final4;
+console.log(GrandFinale);
+return GrandFinale; 
+
+}
+    
+   function updatePassword() {
+       var newString = CreatePassword();
+       document.getElementById('password').innerHTML = newString;
+   } 
+    
+    const generatePinCode = (numberofDigits) => {
+    if(numberofDigits < 4 || numberofDigits > 9) {
+        console.log("number must be between 4 and 9 digits");
+        return;
+    } else {
+        let beginning = "";
+        for (let i=0;i<numberofDigits;i++) {
+            let ranNum = Math.floor(Math.random()*10);
+            beginning += ranNum;
+        }
+        console.log(beginning) }
+}
+    
+function allPossibleCases(arr) {
+    debugger;
+  if (arr.length === 0) {
+    return [];
+  } 
+else if (arr.length ===1){
+return arr[0];
+}
+else {
+    var result = [];
+    var allCasesOfRest = allPossibleCases(arr.slice(1));  // recur with the arrays after the first iteration.
+    for (var c in allCasesOfRest) {
+      for (var i = 0; i < arr[0].length; i++) {
+        result.push(arr[0][i] + allCasesOfRest[c]);
+      }
+    }
+    return result;
+  }
+}
+    
+async function crossword() {
+    let domNode = document.querySelector('#word');
+    let queryValue = domNode.value;
+    try{
+    let fetchResponse = await fetch(`https://api.datamuse.com/words?sp=${queryValue}`);
+    let jsonResponse = await fetchResponse.json();
+    renderHTML(jsonResponse);
+    }
+    catch(error) {
+        console.log(`the error is ${error}`);
+    }
+}
+
+function renderHTML(res) {
+    if(!res) {
+        console.log(res.status);
+    }
+    if(!res.length) {
+        responseField.innerHTML="<p>No suggestions found</p>";
+        return;
+    }
+
+    let wordList = [];
+    for (var i=0;i<res.length;i++) {
+        wordList.push(`<li>${res[i].word}</li>`);
+    }
+    wordList = wordList.join("");
+    responseField.innerHTML = `<p>You might be interested in:</p><ol>${wordList}</ol>`;
+    return;
+}
+function displayWords(e) {
+    while(responseField.firstChld) {
+        responseField.removeChild(responseField.firstChild)
+    }
+    crossword()
+}
+
+
+</script>
+
+</head>
+<body onload ="display()">
+    
+    <!--<a href="./Compliment-Generator.html">Compliments</a>-->
+    <div id="title-container">
+     
+    <h1 id="title">Welcome to Joe's generator!</h1>
+    
+    
+<!--<button onclick="change1()">Click me for text</button>-->
+    
+</div>
+<div id="body-container">
+    <h1>Crossword Builder Help</h1>
+        <p>Enter in letters and ?'s to find all words in that arrangement. For example s??p would find soup or slip. ??as would find teas or peas</p>
+    <h3>Enter Your Query</h3>
+    <input type=text id="word"></input>
+    <button id="submitWord">Get Results</button>
+
+    <div id="responseField">
+
+
+    </div>
+
+    <script>
+        let word = document.querySelector('#submitWord');
+        word.addEventListener('click',displayWords);
+    </script>
+
+        <p id="password">Someday, I'm going to be a really secure password. You'll see!</p>
+        <button onclick="updatePassword()">Click me for a password!</button>
+        <p>Click the button to get a random color!</p><br>
+    <button onclick="change2()">Click me for color!</button><br>
+    <br>
+    <div id="box" height=20px width=100px><p id="random"> Will someone please make me a color? </p></div>
+    <br>
+    <button onclick="change3()"> Click me for a compliment!</button>
+    <br>
+        <p id="randomc">I would like to say something nice about you</p>
+        <br>
+    
+        <div class="outift">
+        <button onclick="change4()">Try on an Outfit!</button><br>
+            <br><br>
+        <img id="top" src="">
+        <img id="bottom" src="">
+    </div>
+       <!--- <button onclick="reset()">Let's change all 3!</button>-->
+        <p>By the way there are <span id="today"></span> days until Christmas!</p>
+    <!--<p>Do not click the button below. I repeat, do NOT click this button</p>
+        <button onClick=alertAndClose()>Don't click me</button><br>
+        
+        <p>These players are in our fantasy league. If I missed someone, add them!</p>
+       
+        <p id="players"></p>
+         <input type="text" id="new">
+        <button onClick="addPlayer();displayPlayers();">Click to add a player to the array</button>-->
+        <p>Want to know how long until your next special occasion? Pick your date below, then click the button!</p>
+        <input type=date id="datePicker">
+        <button onclick="calculateDate()">Click me yay!</button>
+        <p>There are <span id="showDate"></span> days until your special day!</p>
+        <p>Want to know the temperature in celsius? Enter in the degrees in fahrenheit and click to find out</p>
+        <input id ="degrees" type=text><button onclick="calculateCelsius()">Temp Change</button>
+        <p id="celsius">make me celsius</p>
+    </div>
+<h2>Want buy some CHS swag? Check it out below!</h2>
+    <div id="sqd-container"></div>
+</div>
+        <script src="https://d2c-cta.s3-us-west-2.amazonaws.com/build/sqd/index.js"></script>
+        <script>
+          var SQD = new sqd({
+            container: 'sqd-container',
+            moduleType: 'standard',
+            lockerId: '304862',
+            environment: 'production',
+            theme: {
+              fontFamily: "'Lato', sans-serif",
+              color: '#2D3237',
+              backgroundColor: '#FFFFFF',
+              accentColor: '#8BC959'
+            }
+          });
+        </script>
+
+    </body>
+</html>
